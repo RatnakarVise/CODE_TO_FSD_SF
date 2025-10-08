@@ -124,8 +124,8 @@ SECTION_BUNDLES = [
     (["Functional Solution Approach"], ['pgm_name', 'type', 'explanation']),
     (["Interfaces & Integration","Error Handling & Notifications", "Assumptions & Dependencies", "Authorization & Security"], ['selectionscreen', 'declarations', 'explanation']),
     (["Test Scenario"], ['selectionscreen', 'declarations', 'explanation']),
-    (["Smartform Layout"],['sf_structure']),
-    (["Smartform Details"],['sf_structure','sf_purpose']),
+    (["Form Layout Overview"],['sf_structure','sf_purpose']),
+    (["Form Functional Details"],['sf_structure','sf_purpose']),
     (["Sign-Off"], []),
 ]
 # =============================================================================

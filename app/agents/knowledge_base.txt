@@ -40,16 +40,16 @@ description: List of all functional interfaces (inbound, outbound, real-time, ba
 fields: [Interface ID, Source System, Target System, Data/Message Type, Frequency/Mode, Description]
 prompt: Present the interface details strictly in table format based on payload. Do not assume or invent.
 
-#Smartform Layout
+#Form Layout Overview
 type: table
-description: Table of all Layout details using sf_strcuture and sf_purpose.
-fields: [Page, Window, Element, Type, Description].
-prompt: Present the results strictly as a table with the columns: Page, Window, Element, Type, Description. and describe the layout of the smart using the Page window and field details
+description: Business layout of the form capturing each page and its sections with purpose and key data fields.
+fields: [Page/Section, Description, Key Fields, Purpose, Business Notes]
+prompt: Present the results strictly as a table with the columns: Page/Section, Description, Key Fields, Purpose, Business Notes. Explain how each part of the form corresponds to a business requirement or document section. Do not include technical Smartform objects or code.
 
-#Smartform Details
+#Form Functional Details
 type: text
-description: Describe the layout and the usage of all the fields using sf_strcuture and sf_purpose.
-prompt: Describe in detail about each and every section of form starting from Form Name -> Page -> Window -> elements -> code etc. Describe in detail everything you get in as smartform input
+description: Describe each part of the form from a business and functional perspective.
+prompt: Describe in detail the purpose of the form, each page or section, and the key data fields. For each field, mention its business meaning, source, and any rules or conditions. Explain how the form supports the business process and what outputs or approvals it triggers. Avoid any technical details like Smartform elements or ABAP code.
 
 #Output
 type: text
