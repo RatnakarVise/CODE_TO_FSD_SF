@@ -7,7 +7,7 @@ from app.agents.content_writer_agent import ContentWriterAgent
 from app.doc.doc_constructor_agent import build_document
 from app.doc.flow_diagram_agent import FlowDiagramAgent
 
-app = FastAPI(title="ABAP Technical Spec Generator")
+app = FastAPI(title="ABAP Functional Spec Generator")
 
 # In-memory store for job tracking (not for production use)
 JOBS = {}
@@ -37,7 +37,7 @@ def generate_doc_background(payload, job_id):
         diagram_agent = FlowDiagramAgent()
         doc = build_document(results, sections, flow_diagram_agent=diagram_agent, diagram_dir="diagrams")
 
-        output_filename = f"Technical_Spec_{job_id}.docx"
+        output_filename = f"Functional_Spec_{job_id}.docx"
         output_path = os.path.abspath(output_filename)
         doc.save(output_path)
 
